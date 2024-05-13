@@ -74,5 +74,5 @@ You can extract the traits of rice grains through this project.This project prov
 如果你没有稻穗图像，也不想下载yolov7，我们提供了一个demo文件夹，其中包含了稻穗图像和yolov7的推理结果，以帮助你快速学习使用软件。demo在这里找到：https://drive.google.com/drive/folders/1S7BHcjutJ-wtHdn-jR92YGB4lBSxWb-s?usp=drive_link。
 
 
-另外，我们全部公开了本项目所使用的代码，以便后续工作。有关软件Panicle Analyzer的代码可以在panicle_length.py中找到。有关穗长提取的核心代码可以在panicle_length.py中找到。有关粒长粒宽提取的代码可以在LWtrait中找到。
+另外，我们全部公开了本项目所使用的代码，以便后续工作。有关软件Panicle Analyzer的代码可以在panicle_length.py中找到。有关穗长提取的核心代码可以在panicle_length.py中找到。有关粒长粒宽提取的代码可以在LWtrait.py中找到。
 
