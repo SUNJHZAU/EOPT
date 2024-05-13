@@ -71,6 +71,6 @@ You can extract the traits of rice grains through this project.This project prov
 	停止处理：点击‘stop’按钮停止处理稻穗图像
 
 
-如果你没有稻穗图像，也不想下载yolov7，我们提供了一个demo文件夹，其中包含了稻穗图像和yolov7的推理结果，以帮助你快速学习使用软件。
+如果你没有稻穗图像，也不想下载yolov7，我们提供了一个demo文件夹，其中包含了稻穗图像和yolov7的推理结果，以帮助你快速学习使用软件。demo在这里找到：https://drive.google.com/drive/folders/1S7BHcjutJ-wtHdn-jR92YGB4lBSxWb-s?usp=drive_link。
 
 
