@@ -1,77 +1,77 @@
 You can extract the traits of rice grains through this project.This project provides a software to extract the traits of rice grains. It also includes the scripts and neural networks required to use the software.
 
-如何使用这个项目
+How to use this project
 
-首先你需要下载软件Panicle Analyzer，软件可以在这里获得：https://drive.google.com/file/d/1idG-fR5kl_vuKzSj5mTUOMDgD-m4gNRU/view?usp=drive_link
-双击运行软件。软件有三个界面，分别是单张稻穗图像的性状提取界面、穗长批量提取界面和粒长粒宽批量提取界面。
+First you need to download the software Panicle Analyzer, the link to the software is here: https://drive.google.com/file/d/1idG-fR5kl_vuKzSj5mTUOMDgD-m4gNRU/view?usp=drive_link
+Double click to run the software. The software has three interfaces, namely, the trait extraction interface for single panicle images, the batch extraction interface for panicle length and the batch extraction interface for grain length and width.
 
-单张图像的性状提取：
+Trait extraction from a single image:
 
-	1.采集稻穗图像，使用图像采集设备采集稻穗图像。请注意，请使用黑色背景和红色标定物进行拍摄，样图如下![865 - 副本](https://github.com/SUNJHZAU/EOPT/assets/169641564/588c7461-d68c-4508-83e8-163a5044e7b9)
+	1.Capture images of rice panicles. Capture images of the rice panicles using an image capture device. Please note that the image must be taken with a black background and a red calibrator, as shown in the sample image below![865 - 副本](https://github.com/SUNJHZAU/EOPT/assets/169641564/588c7461-d68c-4508-83e8-163a5044e7b9)
  
-	2.对稻穗图像进行裁剪并调整图像高宽比。我们提供了脚本帮助您完成此步骤：crop_img.py。
+	2.Crop the panicle image and adjust the image aspect ratio. For your convenience, we have trained an extra weight on ultralytics. You need to use the weights we provided to reason on the cropped rice panicle image after downloading the ultralytics project on github to get the inference results (.txt). For more information on how to reason with ultralytics, please read the official ultralytics documentation. We have provided scripts to help you with this step：crop_img.py. Links to trained weights are here: https://drive.google.com/file/d/1uwDcCd8m1isIc3mHftRMyGuj105ImFwz/view?usp=drive_link
 	
-	3.为方便您使用，我们在yolov7上额外训练了一个权重。你需要在github上下载yolov7项目之后，使用我们提供的权重对裁剪后的稻穗图像进行推理，以获得推理结果（.txt）。权重可以在这里获得：https://drive.google.com/file/d/1qeqP_ek3PXbiiShQ6i1vv-GoA5rAmcgO/view?usp=drive_link 。关于如何使用yolov7进行推理，请详细阅读yolov7的官方文档。
+	3.For your convenience, we have trained an extra weight on yolov7. You need to use the weights we provided to reason on the cropped panicle images after downloading the yolov7 project on github to get the inference results (.txt). The weights can be obtained here：https://drive.google.com/file/d/1qeqP_ek3PXbiiShQ6i1vv-GoA5rAmcgO/view?usp=drive_link 。For more information on how to reason with yolov7, please read the official yolov7 documentation.
 	
-	4.操作人员依次选择提取性状所需的文件后，点击‘Start analysis’即可展示处理结果和图像。具体操作步骤如下：
+	4.After the operator selects the files required for extracting the traits in turn, click 'Start analysis' to display the processing results and images. The specific operation steps are as follows:
 	
-		选择裁剪图像：点击相应按钮选择裁剪后的稻穗图像
+		Select Cropped Image: Click the corresponding button to select the cropped image of the panicle.
 	 
-		选择原始图像：点击相应按钮选择原始稻穗图像
+		Select Original Image: Click the corresponding button to select the original panicle image.
 	 
-		选择推理结果文件：点击相应按钮选择包含深度学习预测结果的文件 （.txt）
+		Selecting the inference result file: click on the appropriate button to select the file (.txt) containing the deep learning prediction results.
 	 
-		选择子图保存路径：点击相应按钮选择籽粒图像保存的路径
+		Selection of Subgraph Saving Path: Click on the corresponding button to select the path where the grain image is to be saved.
 	 
-		选择处理子图保存路径：点击相应按钮选择处理后的籽粒图像保存的路径
+		Select processing sub-image save path: click the corresponding button to select the path to save the processed grain image.
 	 
-		提取性状并展示结果：点击相应按钮开始提取性状并且将结果展示右侧界面中
+		Extracting traits and displaying results: click on the corresponding button to start extracting traits and displaying the results on the right hand side of the screen.
 
 
-穗长的批量提取：
+Batch extraction of panicle length:
 
-	点击‘Panicle length’按钮转换到相应界面。到这里，我们默认你已经采集了稻穗图像并进行了裁剪。
+	Click the 'Panicle length' button to switch to the appropriate screen. By this point, we have defaulted that you have captured and cropped the panicle image.
 	
-	操作人员依次选择提取穗长所需的文件目录后，点击‘Start analysis’即可展示处理结果。具体操作步骤如下：
+	After the operator selects the file directories required for extracting panicles in turn, click 'Start analysis' to display the processing results. The specific operation steps are as follows:
  
-	选择裁剪图像：点击相应按钮选择裁剪后的稻穗图像所在目录
+	Select Cropped Image: Click the corresponding button to select the directory where the cropped image of the panicle is located.
  
-	选择原始稻穗图像：点击相应按钮选择原始稻穗图像所在目录
+	Selection of original panicle image: click the corresponding button to select the directory where the original panicle image is located.
  
-	选择稻穗骨架主路径图像的保存路径：点击相应按钮选择保存稻穗骨架主路径的文件夹
+	Select the path to save the image of the main path of the panicle skeleton: click on the corresponding button to select the folder where the main path of the panicle is saved.
  
-	选择数据结果文件：点击相应按钮选择穗长数据保存的表格文件
+	Select data result file: Click the corresponding button to select the table file where the panicle data is saved.
  
-	开始提取穗长：点击‘Start analysis’按钮开始提取穗长
+	Start extraction of panicles: Click on the 'Start analysis' button to start extraction of panicles.
  
-	停止处理：点击‘stop’按钮停止处理稻穗图像
+	Stop processing: Click on the 'stop' button to stop processing the image of the panicle.
  	
 
 
-粒长粒宽的批量提取：
+Batch extraction of grain length and width:
 
-	点击‘Grain length、Grain width’按钮转换到相应界面。
+	Click on the 'Grain length, Grain width' button to switch to the corresponding interface.
 	
-	操作人员依次选择提取穗长所需的文件目录后，点击‘Start analysis’即可展示处理结果。具体操作步骤如下：
+	After the operator selects the file directories required for extracting panicles in turn, click 'Start analysis' to display the processing results. The specific operation steps are as follows:
 	
-	选择裁剪图像：点击相应按钮选择裁剪后的稻穗图像所在目录
+	Select Cropped Image: Click the corresponding button to select the directory where the cropped image of the panicle is located.
 	
-	选择原始稻穗图像：点击相应按钮选择原始稻穗图像所在目录
+	Selection of original panicle image: click the corresponding button to select the directory where the original panicle image is located.
 	
-	选择预测结果：点击相应按钮选择保存深度学习预测结果的文件夹
+	Select Predictions: Click the appropriate button to select the folder where the deep learning predictions will be saved.
 	
-	选择子图保存路径：点击相应按钮选择籽粒图像保存的路径
+	Selection of Subgraph Saving Path: Click on the corresponding button to select the path where the grain image is to be saved.
 	
-	选择处理子图保存路径：点击相应按钮选择处理后的籽粒图像保存的路径
+	Select processing sub-image save path: click the corresponding button to select the path to save the processed grain image.
 	
-	选择数据结果文件：点击相应按钮选择粒长、粒宽数据保存的表格文件
+	Selection of data result file: Click the corresponding button to select the table file in which the grain length and width data will be saved.
 	
-	开始提取粒长粒宽：点击‘Start analysis’按钮开始提取粒长和粒宽
+	Start extraction of grain length and width: Click on the 'Start analysis' button to start extraction of grain length and width.
 	
-	停止处理：点击‘stop’按钮停止处理稻穗图像
-
-
-如果你没有稻穗图像，也不想下载yolov7，我们提供了一个demo文件夹，其中包含了稻穗图像和yolov7的推理结果，以帮助你快速学习使用软件。demo在这里找到：https://drive.google.com/drive/folders/1S7BHcjutJ-wtHdn-jR92YGB4lBSxWb-s?usp=drive_link。
+	Stop processing: Click on the 'stop' button to stop processing the image of the panicle.
 
 
-另外，我们全部公开了本项目所使用的代码，以便后续工作。有关软件Panicle Analyzer的代码可以在panicle_length.py中找到。有关穗长提取的核心代码可以在panicle_length.py中找到。有关粒长粒宽提取的代码可以在LWtrait.py中找到。
+If you don't have a panicle image and don't want to download yolov7, we provide a demos folder with panicle images and yolov7 reasoning results to help you learn to use the software quickly. demos can be found here:https://drive.google.com/drive/folders/1S7BHcjutJ-wtHdn-jR92YGB4lBSxWb-s?usp=drive_link。
+
+
+In addition, we have made all of the code used in this project publicly available for subsequent work. The code about the software Panicle Analyzer can be found in panicle_length.py. The core code about panicle length extraction can be found in panicle_length.py. Code for grain length and width extraction can be found in LWtrait.py.
