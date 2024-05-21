@@ -11,17 +11,13 @@ You can extract the traits of rice grains through this project.This project prov
  
 	2.对稻穗图像进行裁剪并调整图像高宽比。我们提供了脚本帮助您完成此步骤：crop_img.py。
 	
-	3.为方便您使用，我们在yolov7上额外训练了一个权重。你需要在github上下载yolov7项目之后，使用我们提供的权重对裁剪后的稻穗图像进行推理，以获得推理结果（.txt）。权重可以在这里获得：https://drive.google.com/file/d/1qeqP_ek3PXbiiShQ6i1vv-GoA5rAmcgO/view?usp=drive_link 。关于如何使用yolov7进行推理，请详细阅读yolov7的官方文档。
-	
-	4.操作人员依次选择提取性状所需的文件后，点击‘Start analysis’即可展示处理结果和图像。具体操作步骤如下：
+	3.操作人员依次选择提取性状所需的文件后，点击‘Start analysis’即可展示处理结果和图像。具体操作步骤如下：
 	
 		选择裁剪图像：点击相应按钮选择裁剪后的稻穗图像
 	 
 		选择原始图像：点击相应按钮选择原始稻穗图像
 	 
-		选择推理结果文件：点击相应按钮选择包含深度学习预测结果的文件 （.txt）
-	 
-		选择子图保存路径：点击相应按钮选择籽粒图像保存的路径
+		选择子图保存路径：点击相应按钮选择籽粒图像保存的路径（请忽略选择txt的按钮）
 	 
 		选择处理子图保存路径：点击相应按钮选择处理后的籽粒图像保存的路径
 	 
@@ -58,9 +54,7 @@ You can extract the traits of rice grains through this project.This project prov
 	
 	选择原始稻穗图像：点击相应按钮选择原始稻穗图像所在目录
 	
-	选择预测结果：点击相应按钮选择保存深度学习预测结果的文件夹
-	
-	选择子图保存路径：点击相应按钮选择籽粒图像保存的路径
+	选择子图保存路径：点击相应按钮选择籽粒图像保存的路径（请忽略选择txt的按钮）
 	
 	选择处理子图保存路径：点击相应按钮选择处理后的籽粒图像保存的路径
 	
@@ -71,7 +65,7 @@ You can extract the traits of rice grains through this project.This project prov
 	停止处理：点击‘stop’按钮停止处理稻穗图像
 
 
-如果你没有稻穗图像，也不想下载yolov7，我们提供了一个demo文件夹，其中包含了稻穗图像和yolov7的推理结果，以帮助你快速学习使用软件。demo在这里找到：https://drive.google.com/drive/folders/1S7BHcjutJ-wtHdn-jR92YGB4lBSxWb-s?usp=drive_link。
+demo在这里找到：https://drive.google.com/drive/folders/1S7BHcjutJ-wtHdn-jR92YGB4lBSxWb-s?usp=drive_link。
 
 
 另外，我们全部公开了本项目所使用的代码，以便后续工作。有关软件Panicle Analyzer的代码可以在panicle_length.py中找到。有关穗长提取的核心代码可以在panicle_length.py中找到。有关粒长粒宽提取的代码可以在LWtrait.py中找到。
