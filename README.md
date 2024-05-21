@@ -11,17 +11,13 @@ Trait extraction from a single image:
  
 	2.Crop the panicle image and adjust the image aspect ratio. For your convenience, we have trained an extra weight on ultralytics. You need to use the weights we provided to reason on the cropped rice panicle image after downloading the ultralytics project on github to get the inference results (.txt). For more information on how to reason with ultralytics, please read the official ultralytics documentation. We have provided scripts to help you with this step：crop_img.py. Links to trained weights are here: https://drive.google.com/file/d/1uwDcCd8m1isIc3mHftRMyGuj105ImFwz/view?usp=drive_link
 	
-	3.For your convenience, we have trained an extra weight on yolov7. You need to use the weights we provided to reason on the cropped panicle images after downloading the yolov7 project on github to get the inference results (.txt). The weights can be obtained here：https://drive.google.com/file/d/1qeqP_ek3PXbiiShQ6i1vv-GoA5rAmcgO/view?usp=drive_link 。For more information on how to reason with yolov7, please read the official yolov7 documentation.
-	
-	4.After the operator selects the files required for extracting the traits in turn, click 'Start analysis' to display the processing results and images. The specific operation steps are as follows:
+	3.After the operator selects the files required for extracting the traits in turn, click 'Start analysis' to display the processing results and images. The specific operation steps are as follows:
 	
 		Select Cropped Image: Click the corresponding button to select the cropped image of the panicle.
 	 
 		Select Original Image: Click the corresponding button to select the original panicle image.
 	 
-		Selecting the inference result file: click on the appropriate button to select the file (.txt) containing the deep learning prediction results.
-	 
-		Selection of Subgraph Saving Path: Click on the corresponding button to select the path where the grain image is to be saved.
+		Selection of Subgraph Saving Path: Click on the corresponding button to select the path where the grain image is to be saved.Do not click on the button to select the txt file.
 	 
 		Select processing sub-image save path: click the corresponding button to select the path to save the processed grain image.
 	 
@@ -58,9 +54,7 @@ Batch extraction of grain length and width:
 	
 	Selection of original panicle image: click the corresponding button to select the directory where the original panicle image is located.
 	
-	Select Predictions: Click the appropriate button to select the folder where the deep learning predictions will be saved.
-	
-	Selection of Subgraph Saving Path: Click on the corresponding button to select the path where the grain image is to be saved.
+	Selection of Subgraph Saving Path: Click on the corresponding button to select the path where the grain image is to be saved.Do not click on the button to select the txt file.
 	
 	Select processing sub-image save path: click the corresponding button to select the path to save the processed grain image.
 	
@@ -71,7 +65,7 @@ Batch extraction of grain length and width:
 	Stop processing: Click on the 'stop' button to stop processing the image of the panicle.
 
 
-If you don't have a panicle image and don't want to download yolov7, we provide a demos folder with panicle images and yolov7 reasoning results to help you learn to use the software quickly. demos can be found here:https://drive.google.com/drive/folders/1S7BHcjutJ-wtHdn-jR92YGB4lBSxWb-s?usp=drive_link。
+Demos can be found here:https://drive.google.com/drive/folders/1S7BHcjutJ-wtHdn-jR92YGB4lBSxWb-s?usp=drive_link。
 
 
 In addition, we have made all of the code used in this project publicly available for subsequent work. The code about the software Panicle Analyzer can be found in panicle_length.py. The core code about panicle length extraction can be found in panicle_length.py. Code for grain length and width extraction can be found in LWtrait.py.
