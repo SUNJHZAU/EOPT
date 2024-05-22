@@ -2,14 +2,14 @@ You can extract the traits of rice grains through this project.This project prov
 
 How to use this project
 
-First you need to download the software Panicle Analyzer, the link to the software is here: https://drive.google.com/file/d/1idG-fR5kl_vuKzSj5mTUOMDgD-m4gNRU/view?usp=drive_link
+First you need to download the software Panicle Analyzer, the link to the software is here: [https://drive.google.com/file/d/1idG-fR5kl_vuKzSj5mTUOMDgD-m4gNRU/view?usp=drive_link](https://drive.google.com/file/d/1YO7lHqfQT0VRAmMYbB7tP16cDR38O6wu/view?usp=drive_link)
 Double click to run the software. The software has three interfaces, namely, the trait extraction interface for single panicle images, the batch extraction interface for panicle length and the batch extraction interface for grain length and width.
 
 Trait extraction from a single image:
 
 	1.Capture images of rice panicles. Capture images of the rice panicles using an image capture device. Please note that the image must be taken with a black background and a red calibrator, as shown in the sample image below![865 - 副本](https://github.com/SUNJHZAU/EOPT/assets/169641564/588c7461-d68c-4508-83e8-163a5044e7b9)
  
-	2.Crop the panicle image and adjust the image aspect ratio. For your convenience, we have trained an extra weight on ultralytics. You need to use the weights we provided to reason on the cropped rice panicle image after downloading the ultralytics project on github to get the inference results (.txt). For more information on how to reason with ultralytics, please read the official ultralytics documentation. We have provided scripts to help you with this step：crop_img.py. Links to trained weights are here: https://drive.google.com/file/d/1uwDcCd8m1isIc3mHftRMyGuj105ImFwz/view?usp=drive_link
+	2.Crop the panicle image and adjust the image aspect ratio. Just crop the image of the panicle until only the body of the panicle remains.
 	
 	3.After the operator selects the files required for extracting the traits in turn, click 'Start analysis' to display the processing results and images. The specific operation steps are as follows:
 	
@@ -65,7 +65,8 @@ Batch extraction of grain length and width:
 	Stop processing: Click on the 'stop' button to stop processing the image of the panicle.
 
 
-Demos can be found here:https://drive.google.com/drive/folders/1S7BHcjutJ-wtHdn-jR92YGB4lBSxWb-s?usp=drive_link。
+
+If you do not want to capture new panicle images and crop images. We have provided some original and cropped images of the images for you to useDemos can be found here:https://drive.google.com/drive/folders/1S7BHcjutJ-wtHdn-jR92YGB4lBSxWb-s?usp=drive_link。
 
 
 In addition, we have made all of the code used in this project publicly available for subsequent work. The code about the software Panicle Analyzer can be found in panicle_length.py. The core code about panicle length extraction can be found in panicle_length.py. Code for grain length and width extraction can be found in LWtrait.py.
