@@ -2,8 +2,7 @@ You can extract the traits of rice grains through this project.This project prov
 
 How to use this project
 
-First you need to download the software Panicle Analyzer and onnx model, the link to the software is here: https://drive.google.com/file/d/1MGG-_HLZ1JpdQnqMvqaH5kJcc8mn5cox/view?usp=drive_link.
-https://drive.google.com/file/d/1n2v7pCvBL_ehbPjIUNMF-wtBUtII_kXV/view?usp=drive_link
+First you need to download the software Panicle Analyzer and onnx model, the link to the software is here: https://pan.baidu.com/s/1ht2bUoqNQUWUJT5fuXBBrQ?pwd=m4wm 
 Double click to run the software. The software has three interfaces, namely, the trait extraction interface for single panicle images, the batch extraction interface for panicle length and the batch extraction interface for grain length and width.
 
 Trait extraction from a single image:
